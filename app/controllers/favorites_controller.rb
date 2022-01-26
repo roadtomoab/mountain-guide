@@ -6,6 +6,10 @@ class FavoritesController < ApplicationController
         render json: user.favorite_mountains
     end
 
+    def create
+        # do I need to "create", or can I just have an attribute that says is_favorited?
+    end
+
     def destroy
         favorite = Favorite.find_by_id(params[:id])
         if favorite

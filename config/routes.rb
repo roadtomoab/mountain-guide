@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
-  resources :favorites, only: [:index, :destroy]
-  resources :ratings
-  resources :users
+  resources :favorites, only: [:index, :create, :destroy]
+  resources :ratings, only: [:create]
+  resources :users, only: [:show, :create]
   resources :mountains, only: [:index, :show]
 
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
   get "/me", to: "users#show"
-  get "/signup", to: "users#create"
+  post "/signup", to: "users#create"
 
   get '*path',
       to: 'fallback#index',
