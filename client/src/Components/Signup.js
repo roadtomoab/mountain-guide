@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 function Signup () {
 
@@ -67,8 +68,9 @@ function Signup () {
                 />
                 <button type="submit">Submit</button>
             </form>
-            <p>Already have an account?</p>
-            <p>Click here to LogIn</p>
+            <br></br>
+            <br></br>
+            <NavLink to="/login">Already have an account? Please login here</NavLink>
         </div>
 
     )

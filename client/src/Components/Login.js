@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 function Login ({ setCurrentUser }) {
 
@@ -58,6 +59,10 @@ function Login ({ setCurrentUser }) {
             onChange={handleChange}
             />
             <button type="submit">Login</button>
+            <br></br>
+            <br></br>
+            <NavLink to="/signup">Don't have an account? Please sign up here</NavLink>
+
         </form>
     </div>
 
