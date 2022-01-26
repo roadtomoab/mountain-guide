@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+
+    def index
+        render json: User.all
+    end
     def show
         if current_user
             render json: current_user, status: :ok
@@ -20,6 +24,6 @@ class UsersController < ApplicationController
     private
     
     def user_params
-        params.permit(:email, :username, :password)
+        params.permit(:username, :password, :email)
     end
 end

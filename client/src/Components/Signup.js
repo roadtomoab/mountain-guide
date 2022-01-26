@@ -3,10 +3,40 @@ import { useState } from 'react';
 function Signup () {
 
     const [ formData, setFormData ] = useState({
-        email: "",
         username: "",
-        password: ""
+        password: "",
+        email: ""
     });
+
+    const handleChange = (e) => {
+        setFormData({
+          ...formData,
+          [e.target.name]: e.target.value,
+        });
+      };
+    
+      function handleSubmit(e) {
+        e.preventDefault();
+    
+        const userCreds = { ...formData };
+    
+        fetch("/users", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(userCreds),
+        })
+          .then((r) => r.json())
+          .then((user) => {
+            console.log(user);
+            setFormData({
+              username: "",
+              password: "",
+              email: ""
+            });
+          });
+      }
 
     return (
 
@@ -16,18 +46,21 @@ function Signup () {
                 <input
                 type="text"
                 placeholder="e-mail"
+                name="email"
                 value={formData.email}
                 onChange={handleChange}
                 />
                 <input 
                 type="text"
                 placeholder="username"
+                name="username"
                 value={formData.username}
                 onChange={handleChange}
                 />
                 <input
-                type="text"
+                type="password"
                 placeholder="password"
+                name="password"
                 value={formData.password}
                 onChange={handleChange}
                 />

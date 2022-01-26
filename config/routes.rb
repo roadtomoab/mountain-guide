@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :favorites, only: [:index, :create, :destroy]
   resources :ratings, only: [:create]
-  resources :users, only: [:show, :create]
+  resources :users, only: [:show, :create, :index]
   resources :mountains, only: [:index, :show]
 
   post "/login", to: "sessions#create"
