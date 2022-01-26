@@ -1,9 +1,11 @@
 import './App.css';
 import { useState, useEffect } from "react";
 import { Switch, Route, NavLink } from "react-router-dom";
-import Home from './Components/Home'
+import Home from './Components/Home';
 import Signup from './Components/Signup';
-import Login from './Components/Login'
+import Login from './Components/Login';
+import LoggedOutNav from './Components/LoggedOutNav';
+import LoggedInNav from './Components/LoggedInNav';
 
 
 function App () {
@@ -24,14 +26,7 @@ function App () {
 
   return (
       <div className="app">
-          <div className="nav-bar">
-            <img className="logo" src="https://cdn.dribbble.com/users/1888142/screenshots/4086098/media/9964fbf4a9ebc54f9146af7f8259939c.gif" alt="mountain logo" />
-            <NavLink exact to="/" >HOME</NavLink>
-            <NavLink to="/mountains" >EXPLORE</NavLink>
-            <NavLink to="/about">ABOUT</NavLink>
-            <NavLink to="/contact">CONTACT</NavLink>
-            <NavLink to="/login">LOGIN</NavLink>
-          </div>
+        {currentUser ? <LoggedInNav setCurrentUser={setCurrentUser}/> : <LoggedOutNav />}
           <Switch>
 
             <Route exact path="/">
