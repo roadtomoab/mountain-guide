@@ -61,6 +61,7 @@ function Signup () {
                 type="password"
                 placeholder="password"
                 name="password"
+                autoComplete="on"
                 value={formData.password}
                 onChange={handleChange}
                 />
