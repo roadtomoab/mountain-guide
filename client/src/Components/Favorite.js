@@ -4,11 +4,9 @@ function Favorite ({ favorite, favoriteRemoval }) {
         favoriteRemoval(favorite)
     }
 
-
     return (
         <div className="favorite">
-            <p>{favorite.name}</p>
-            <br></br>
+            <p>{favorite.mountain.name}</p>
             <button onClick={handleClick}>Remove from Favorites</button>
         </div>
     )

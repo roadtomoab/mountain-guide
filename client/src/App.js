@@ -24,10 +24,22 @@ function App () {
 
   useEffect(fetchMountains, [])
 
+  // function fetchRatings () {
+  //   fetch("/ratings")
+  //   .then
+  // }
+
+  function fetchFavorites () {
+    fetch("/favorites")
+    .then(r => r.json())
+    .then(data => setFavoritesArray(data))
+  }
+
   useEffect(() => {
     fetch("/me").then((res) => {
       if (res.ok) {
         res.json().then((user) => {
+          fetchFavorites();
           setCurrentUser(user);
         });
       }

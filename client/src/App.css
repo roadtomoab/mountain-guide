@@ -119,21 +119,23 @@ a:hover {
 }
 
 .mountains p {
-  font-weight: 400px;
+  font-weight: 100;
   max-width: 60%;
 }
 
 .mountains h3 {
   font-size: 23px;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .mountains span {
   padding-bottom: 1rem;
+  font-weight: 100;
 }
 
 .mountains a {
   font-size: 16px;
+  padding-bottom: 1rem;
 }
 
 .mountains form {
@@ -148,6 +150,10 @@ a:hover {
 .favorites {
   color: white;
   padding-left: 4rem;
+}
+
+.favorite {
+  display: inline-grid;
 }
 
 .submit-button {

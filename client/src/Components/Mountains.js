@@ -19,7 +19,8 @@ function Mountains ({ addToFavorites, mountainsArray }) {
                 mountainToMountains={mountainToMountains}/>
             )
             })}
-            <NavLink to="/favorites">View All Favorites</NavLink>
+            <br></br>
+            <br></br>
         </div>
 
     )
