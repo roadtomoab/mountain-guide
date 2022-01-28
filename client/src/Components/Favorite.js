@@ -4,10 +4,12 @@ function Favorite ({ favorite, favoriteRemoval }) {
         favoriteRemoval(favorite)
     }
 
+    console.log(favorite.mountain.name)
+
     return (
-        <div className="favorite">
-            <p>{favorite.mountain.name}</p>
-            <button onClick={handleClick}>Remove from Favorites</button>
+        <div className="row">
+            <p className="column">{favorite.mountain.name}</p>
+            <button id="delete-button" className="column" onClick={handleClick}>Remove from Favorites</button>
         </div>
     )
 }

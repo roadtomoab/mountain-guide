@@ -11,6 +11,7 @@ function Mountains ({ addToFavorites, mountainsArray }) {
     return (
 
         <div className='mountains'>
+            <br></br>
             {mountainsArray.map((mountain) => {
             return (
                 <Mountain

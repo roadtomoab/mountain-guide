@@ -59,7 +59,7 @@ function Mountain ({ mountainToMountains, mountain }) {
             <h3>Ski Rating</h3>
             <span>{mountain.avg_ratings.avg_ski_rating}/10</span>
 
-            <p>Leave a Rating!</p>
+            <h4>Leave a Rating!</h4>
                 <form onSubmit={handleSubmit}>
                     <input
                     type="float"

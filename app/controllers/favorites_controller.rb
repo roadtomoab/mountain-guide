@@ -5,8 +5,6 @@ class FavoritesController < ApplicationController
         user = current_user
         favs = user.favorites
         render json: favs
-        # favs = user.favorite_mountains
-        # render json: favs, each_serializer: FavoriteSerializer
     end
 
     def create

@@ -105,37 +105,45 @@ a:hover {
 }
 
 .mountains {
-  color: white;
+  color: black;
   font-family: 'Roboto', sans-serif;
   padding-left: 2rem;
+  background-color: whitesmoke;
 }
 
 .mountains h1 {
   background-color: rgb(0, 254, 203, .6);
   max-width: 25%;
   text-indent: 4px;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 35px;
 }
 
 .mountains p {
-  font-weight: 100;
+  font-weight: 300;
   max-width: 60%;
 }
 
 .mountains h3 {
   font-size: 23px;
-  font-weight: 300;
+  font-weight: 400;
+}
+
+.mountains h4 {
+  font-weight: 400;
 }
 
 .mountains span {
   padding-bottom: 1rem;
-  font-weight: 100;
+  font-weight: 300;
 }
 
 .mountains a {
   font-size: 16px;
   padding-bottom: 1rem;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+
 }
 
 .mountains form {
@@ -147,13 +155,22 @@ a:hover {
   height: 50%;
 }
 
+.mountains a {
+  color: black;
+  font-family: ;
+}
+
 .favorites {
   color: white;
   padding-left: 4rem;
 }
 
-.favorite {
-  display: inline-grid;
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 20%;
 }
 
 .submit-button {
