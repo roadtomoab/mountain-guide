@@ -1,6 +1,6 @@
 import Favorite from "./Favorite";
 
-function Favorites ({ favoritesArray }) {
+function Favorites ({ favoritesArray, favoriteRemoval }) {
 
     return (
         <div className="favorites">
@@ -10,6 +10,7 @@ function Favorites ({ favoritesArray }) {
                     <Favorite 
                     key={favorite.id}
                     favorite={favorite}
+                    favoriteRemoval={favoriteRemoval}
                     />
                 )
             })}

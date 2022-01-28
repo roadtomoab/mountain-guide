@@ -45,7 +45,6 @@ function App () {
       const favObj = { 
         favorite: {
           mountain_id: clickedMountain.id,
-          // user_id: currentUser.id 
         }
         
       }
@@ -65,6 +64,17 @@ function App () {
     else {
       console.log("duplicate")
     }
+
+  }
+
+  function favoriteRemoval(clickedFavorite) {
+
+    const updatedFavoritesArray = favoritesArray.filter((object) => object.id !== clickedFavorite.id)
+    setFavoritesArray(updatedFavoritesArray)
+
+    console.log(clickedFavorite)
+
+    fetch(`/favorites/${clickedFavorite.id}`, { method: "DELETE" });
 
   }
 
@@ -94,7 +104,10 @@ function App () {
             </Route>
 
             <Route path="/favorites">
-              <Favorites favoritesArray={favoritesArray}/>
+              <Favorites
+              favoritesArray={favoritesArray}
+              favoriteRemoval={favoriteRemoval}
+              />
             </Route>
 
           </Switch>

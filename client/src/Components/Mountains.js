@@ -1,5 +1,6 @@
 import Mountain from './Mountain'
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
+
 
 function Mountains ({ addToFavorites, mountainsArray }) {
 
@@ -10,8 +11,6 @@ function Mountains ({ addToFavorites, mountainsArray }) {
     return (
 
         <div className='mountains'>
-            <NavLink to="/favorites">Go to My Favorites</NavLink>
-            <h1>Mountains</h1>
             {mountainsArray.map((mountain) => {
             return (
                 <Mountain
@@ -20,6 +19,7 @@ function Mountains ({ addToFavorites, mountainsArray }) {
                 mountainToMountains={mountainToMountains}/>
             )
             })}
+            <NavLink to="/favorites">View All Favorites</NavLink>
         </div>
 
     )

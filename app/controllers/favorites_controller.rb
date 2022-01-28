@@ -1,5 +1,5 @@
 class FavoritesController < ApplicationController
-    # before_action :authorize
+    before_action :authorize
 
     def index
         user = current_user
@@ -19,7 +19,7 @@ class FavoritesController < ApplicationController
     end
 
     def destroy
-        favorite = Favorite.find_by_id(params[:id])
+        favorite = Favorite.find_by(id: params[:id])
         if favorite
             favorite.destroy
             head :no_content

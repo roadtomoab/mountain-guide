@@ -69,6 +69,7 @@ a:hover {
   background-color: rgb(0, 254, 203, .6);
   max-width: 75%;
   font-size: 38px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .home h3 {
@@ -85,6 +86,7 @@ a:hover {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 15px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .text {
@@ -104,36 +106,69 @@ a:hover {
 
 .mountains {
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
+  padding-left: 2rem;
 }
 
 .mountains h1 {
-  padding-left: 4rem;
+  background-color: rgb(0, 254, 203, .6);
+  max-width: 25%;
+  text-indent: 4px;
+  font-weight: 400;
+  font-size: 35px;
+}
+
+.mountains p {
+  font-weight: 400px;
+  max-width: 60%;
 }
 
 .mountains h3 {
-  padding-left: 4rem;
+  font-size: 23px;
+  font-weight: 400;
 }
 
-.mountains img {
-  padding-left: 4rem;
-}
-
-.mountains ul {
-  padding-left: 4rem;
+.mountains span {
   padding-bottom: 1rem;
 }
 
-.mountains li {
-  margin-left: 1rem;
-  padding-top: 1rem;
+.mountains a {
+  font-size: 16px;
 }
 
-.mountains a {
-  padding-left: 9rem;
+.mountains form {
+  padding-bottom: 1rem;
+}
+
+.mountains img {
+  width: 50%;
+  height: 50%;
 }
 
 .favorites {
   color: white;
   padding-left: 4rem;
 }
+
+.submit-button {
+  border: 0;
+  height: 20px;
+  width: 80px;
+  background-color: white;
+}
+
+/* #home-button {
+  align-items: left;
+  font-family: TT Commons,-apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  background-color: #3a5dae;
+  color: white;
+  border: 0;
+  height: 40px;
+  width: 110px;
+  cursor: pointer;
+} */
+
+/* font-family: 'Roboto', sans-serif; */
+/* wght@0,100;0,300;0,400;1,100;1 */

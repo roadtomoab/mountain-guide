@@ -1,8 +1,15 @@
-function Favorite ({ favorite }) {
+function Favorite ({ favorite, favoriteRemoval }) {
+
+    function handleClick () {
+        favoriteRemoval(favorite)
+    }
+
 
     return (
         <div className="favorite">
-            <h3>{favorite.name}</h3>
+            <p>{favorite.name}</p>
+            <br></br>
+            <button onClick={handleClick}>Remove from Favorites</button>
         </div>
     )
 }
