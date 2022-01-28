@@ -3,11 +3,13 @@ class UsersController < ApplicationController
     def index
         render json: User.all
     end
+
     def show
-        if current_user
-            render json: current_user, status: :ok
+        user = User.find_by(id: session[:user_id])
+        if user
+            render json: user, status: :created
         else
-            render json: { error: "No current session stored" }, status: :unauthorized
+            render json: { error: "no current session stored" }, status: :unauthorized
         end
     end
 
@@ -18,6 +20,16 @@ class UsersController < ApplicationController
             render json: user, status: :created
         else
             render json: { erros: user.errors.full_message }, status: :unprocessable_entity
+        end
+    end
+
+    def update
+        user = User.find_by(id: session[:user_id])
+        if user
+            user.update(user_params)
+            render json: user, status: :accepted
+        else
+            render json: { error: "Need to be logged in" }, status: :unauthorized
         end
     end
 

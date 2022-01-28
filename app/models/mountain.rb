@@ -6,11 +6,11 @@ class Mountain < ApplicationRecord
 
     def average_town_rating
         ratings = self.ratings.map { |r| r.town_rating }
-        ratings.sum(0.0) / ratings.size
+        (ratings.sum(0.0) / ratings.size).round(2)
     end
 
     def average_ski_rating
         ratings = self.ratings.map { |r| r.ski_rating }
-        ratings.sum(0.0) / ratings.size
+        (ratings.sum(0.0) / ratings.size).round(2)
     end
 end

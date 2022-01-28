@@ -17,28 +17,26 @@ Mountain.create!([
         summary: "Sick mountain brah",
         pass_info: "ikon pass",
         avg_snowfall: 300.00,
-        town_rating: 5.4,
-        ski_rating: 8.7,
         best_for: "serious skiers",
-        name: "Winter Park"
+        name: "Winter Park",
+        image_url: "https://photos.jemphotography.com/rocky-mountain-national-park-trail-ridge-notch_256x.png"
     },
     {
         summary: "Sick mountain brah",
         pass_info: "epic pass",
         avg_snowfall: 220.00,
-        town_rating: 9.0,
-        ski_rating: 8.7,
         best_for: "skiers of all types",
-        name: "Breckenridge"
+        name: "Breckenridge",
+        image_url: "https://photos.jemphotography.com/rocky-mountain-national-park-trail-ridge-notch_256x.png"
+
     },
     {
         summary: "Sick mountain brah",
         pass_info: "epic pass",
         avg_snowfall: 374.00,
-        town_rating: 9.5,
-        ski_rating: 9.5,
         best_for: "skiers of all types",
-        name: "Vail"
+        name: "Vail",
+        image_url: "https://photos.jemphotography.com/rocky-mountain-national-park-trail-ridge-notch_256x.png"
     }
 ])
 
@@ -46,19 +44,23 @@ puts "Seeding users..."
 User.create!([
     {
         username: "noahblum",
-        password_digest: "123"
+        password_digest: "123",
+        email: "noah.blumenstein@gmail.com"
     },
     {
         username: "mrbean",
-        password_digest: "123"
+        password_digest: "123",
+        email: "mrbean"
     },
     {
         username: "earthisflat",
-        password_digest: "123"
+        password_digest: "123",
+        email: "earthisflat"
     },
     {
         username: "bobby",
-        password_digest: "123"
+        password_digest: "123",
+        email: "bobby"
     }
 ])
 

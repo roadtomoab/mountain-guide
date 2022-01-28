@@ -1,15 +1,6 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'
 
-function LoggedInNav ({ setCurrentUser }) {
-
-    const handleLogout = () => {
-        fetch('/logout', {method: "DELETE"})
-        .then(res => {
-              if (res.ok) {
-                setCurrentUser(null)
-              }
-            })
-      }
+function LoggedOut () {
 
     return (
         <div className="nav-bar">
@@ -18,9 +9,10 @@ function LoggedInNav ({ setCurrentUser }) {
             <NavLink to="/mountains" >EXPLORE</NavLink>
             <NavLink to="/about">ABOUT</NavLink>
             <NavLink to="/contact">CONTACT</NavLink>
-            <a onClick={handleLogout}>LOGOUT</a>
+            <NavLink to="/login">LOGIN</NavLink>
         </div>
+
     )
 }
 
-export default LoggedInNav;
+export default LoggedOut;

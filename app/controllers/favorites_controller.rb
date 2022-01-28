@@ -1,5 +1,5 @@
 class FavoritesController < ApplicationController
-    before_action :authorize
+    # before_action :authorize
 
     def index
         user = current_user
@@ -7,7 +7,15 @@ class FavoritesController < ApplicationController
     end
 
     def create
-        # do I need to "create", or can I just have an attribute that says is_favorited?
+        user_id = session[:user_id]
+        params[:user_id] = user_id
+        params[:mountain_id] = params[:favorite][:mountain_id]
+        favorite = Favorite.create(favorite_params)
+        if favorite.valid?
+            render json: favorite, status: :created
+        else
+            render json: "User must be logged in to add favorites", status: :unauthorized
+        end
     end
 
     def destroy
@@ -21,6 +29,10 @@ class FavoritesController < ApplicationController
     end
 
     private
+
+    def favorite_params
+        params.permit(:mountain_id, :user_id)
+    end
 
     def authorize
         return render json: { error: "Must be logged in to view your favorites" }, status: :unauthorized unless session.include? :user_id

@@ -71,6 +71,22 @@ a:hover {
   font-size: 38px;
 }
 
+.home h3 {
+  font-weight: 425;
+}
+
+.home button {
+  background-color: rgb(0, 254, 203, .6);
+  color: white;
+  border: 0;
+  height: 40px;
+  width: 80px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 15px;
+}
+
 .text {
   z-index: 100;
   position: relative;
@@ -84,4 +100,40 @@ a:hover {
   color: white;
   text-align: center;
   padding-bottom: 20rem;
+}
+
+.mountains {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.mountains h1 {
+  padding-left: 4rem;
+}
+
+.mountains h3 {
+  padding-left: 4rem;
+}
+
+.mountains img {
+  padding-left: 4rem;
+}
+
+.mountains ul {
+  padding-left: 4rem;
+  padding-bottom: 1rem;
+}
+
+.mountains li {
+  margin-left: 1rem;
+  padding-top: 1rem;
+}
+
+.mountains a {
+  padding-left: 9rem;
+}
+
+.favorites {
+  color: white;
+  padding-left: 4rem;
 }
